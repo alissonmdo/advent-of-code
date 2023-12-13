@@ -8,11 +8,15 @@ try {
     );
   }
   const [year, day, part] = args[0].split("/");
+  console.clear();
   console.log(
     `🚀 Advent of Code ${year} - Day ${day}${part ? ` - Part ${part}` : ""}`
   );
 
-  const input = readFileSync(`${__dirname}/../${year}/${day}/input.txt`, "utf8");
+  const input = readFileSync(
+    `${__dirname}/../${year}/${day}/input.txt`,
+    "utf8"
+  );
 
   if (part) {
     const { default: solution } = require(`../${year}/${day}/part-${part}`);
