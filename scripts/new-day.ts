@@ -11,9 +11,9 @@ import path from "path";
 try {
   const args = process.argv.slice(2);
 
-  if (args.length !== 1) {
+  if (args.length < 1 || args.length > 2) {
     throw new Error(
-      `Expected 1 argument, but got ${args.length} (${args.join(", ")})`
+      `Expected 1 or 2 arguments, but got ${args.length} (${args.join(", ")})`
     );
   }
 
