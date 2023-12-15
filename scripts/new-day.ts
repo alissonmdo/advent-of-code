@@ -35,7 +35,7 @@ try {
   }
 
   const newFileContent = `export default function solution (input: string): string | number {
-  return input;
+  return "";
 }
 `;
 
